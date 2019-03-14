@@ -1,0 +1,19 @@
+package com.meteor.design.pattern.creation.factory.abstractFactory;
+
+/**
+ * 调用者
+ *
+ * @author: luoguihan
+ * @date: 2019/1/27
+ * @version: 1.0
+ */
+public class Customer {
+
+    public static void main(String[] args) {
+        CarFactory factory = new BMWFactory();
+        Car economicalCar = factory.createEconomicalCar();
+        economicalCar.drive();
+        Car extremeCar = factory.createExtremeCar();
+        extremeCar.drive();
+    }
+}
